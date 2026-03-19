@@ -53,7 +53,7 @@ ORDER BY month;
 
 
 -- 6. Top Customers
--- Purpose: Identify high-value customers for retention strategies
+-- Purpose: Identify high-value customers by total sales
 
 SELECT customer_name, SUM(sales) AS revenue
 FROM sales
