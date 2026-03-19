@@ -1,8 +1,8 @@
--- =====================================================
--- SQL Sales Analysis
--- Restaurant dataset analytical queries
+-- ==================================================
+-- End-to-End Sales Analytics Project
+-- SQL analysis of Superstore retail sales data
 -- Author: Zaur Israfilov
--- =====================================================
+-- ==================================================
 
 
 -- 1. Total Revenue
