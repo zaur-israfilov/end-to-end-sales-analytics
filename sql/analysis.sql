@@ -62,8 +62,8 @@ ORDER BY revenue DESC
 LIMIT 10;
 
 
--- 7. Region Performance
--- Purpose: Compare performance across regions/states
+-- 7. State Performance
+-- Purpose: Compare performance across states
 
 SELECT state, SUM(sales) AS revenue
 FROM sales
