@@ -1,143 +1,109 @@
 # End-to-End Sales Analytics Project
 
-An end-to-end data analysis project combining **Excel, SQL, Python and Power BI** to transform raw restaurant sales data into **actionable business insights**.
+This project demonstrates a complete data analysis workflow using a real retail dataset.
+
+The goal is to transform raw sales data into **actionable business insights** using Excel, SQL, Python, and Power BI.
 
 ---
 
 ## Business Problem
 
-Restaurant managers need to understand customer spending patterns, peak hours, and revenue drivers in order to make better operational decisions.
+Retail businesses need to understand:
 
-This project analyzes transactional restaurant data to answer key business questions about **revenue distribution, customer behavior, and tipping patterns.**
+- which regions drive the most revenue
+- which product categories are most profitable
+- how sales evolve over time
+- which products contribute most to revenue
+
+This project analyzes historical sales data to support **better decision-making and performance optimization.**
 
 ---
 
 ## Dataset
 
-The dataset contains **245 restaurant transactions** with the following attributes:
+The dataset contains **9,994 retail transactions** from a global superstore.
 
-- total_bill
-- tip
-- sex
-- smoker
-- day
-- time
-- size (party size)
+It includes:
 
-The data represents individual dining transactions and allows analysis of **customer spending behavior and operational patterns.**
+- order and shipping dates
+- customer and regional data
+- product categories and sub-categories
+- sales, quantity, discount, and profit
 
 ---
 
 ## Project Pipeline
 
-This project demonstrates a **complete data analysis workflow.**
+### 1. Excel – Business Exploration
 
-### 1. Excel – Initial Exploration
+Excel was used for initial business-focused analysis using pivot tables.
 
-Excel was used for quick exploratory checks and pivot-table summaries.
+### Key Analyses:
 
-Key tasks:
+- Revenue by Region  
+- Revenue by Category  
+- Profit by Category  
+- Top Products  
+- Monthly Sales Trends  
 
-- revenue breakdown by day
-- average bill by group size
-- quick dataset validation
+### Visual Results
 
----
+#### Revenue by Region
+![Revenue by Region](images/excel/revenue_by_region.png)
 
-### 2. SQL – Analytical Queries
+#### Revenue by Category
+![Revenue by Category](images/excel/revenue_by_category.png)
 
-SQL queries were used to answer core business questions.
+#### Profit by Category
+![Profit by Category](images/excel/profit_by_category.png)
 
-Examples:
+#### Top Products
+![Top Products](images/excel/top_products.png)
 
-- Which day generates the highest revenue?
-- What is the average bill per party size?
-- How does tipping behavior vary across customer groups?
-
-The SQL layer demonstrates how analysts extract insights directly from structured data.
-
----
-
-### 3. Python – Exploratory Data Analysis
-
-Python was used for deeper analysis and visualization.
-
-Libraries used:
-
-- Pandas
-- Matplotlib
-- Seaborn
-
-EDA helped identify patterns in:
-
-- bill distribution
-- tipping behavior
-- customer group size
-- peak dining periods
+#### Monthly Sales
+![Monthly Sales](images/excel/monthly_sales.png)
 
 ---
 
-### 4. Power BI – Business Dashboard
+## Key Insights from Excel Analysis
 
-Power BI was used to build an **interactive business dashboard** allowing managers to monitor:
-
-- revenue trends
-- customer spending patterns
-- tipping behavior
-- peak demand periods
-
----
-
-## Key Insights
-
-Examples of insights derived from the analysis:
-
-- Weekend dining generates the highest total revenue.
-- Larger groups tend to produce higher total bills.
-- Evening dining periods show stronger tipping patterns.
+- Sales are heavily concentrated in specific regions, indicating uneven market performance.
+- Technology products generate the highest revenue.
+- Profitability varies significantly across categories — not all high-revenue categories are high-profit.
+- A small number of products drive a large share of total revenue (Pareto effect).
+- Sales trends show clear monthly fluctuations, useful for demand planning.
 
 ---
 
-## Business Recommendations
+## Business Interpretation
 
-Based on the analysis:
-
-1. Increase staffing during peak weekend hours.
-2. Encourage larger group reservations.
-3. Adjust operational focus during high-demand dining periods.
+- Focus on high-performing regions to maximize ROI.
+- Optimize pricing and costs in low-profit categories.
+- Identify and promote top-performing products.
+- Use monthly trends for inventory and staffing planning.
 
 ---
 
 ## Tools Used
 
-- Excel
-- SQL
-- Python (Pandas, Matplotlib, Seaborn)
-- Power BI
+- Excel (Pivot Tables, Business Analysis)
+- SQL (planned for analytical queries)
+- Python (EDA – upcoming)
+- Power BI (dashboard – upcoming)
 
 ---
 
 ## Project Structure
 
-```end-to-end-sales-analytics
+```
+end-to-end-sales-analytics
 │
 ├── data
-│ └── sales_data.csv
-│
 ├── excel
-│
 ├── sql
-│ ├── schema.sql
-│ └── analysis.sql
-│
 ├── python
-│ └── eda_sales_analysis.ipynb
-│
 ├── powerbi
-│
 ├── images
-│
-├── .gitignore
 └── README.md
 ```
 
@@ -145,5 +111,5 @@ Based on the analysis:
 
 ## Author
 
-Zaur İsrafilov  
-Data Analyst focused on **SQL, Python and Business Intelligence**
+Zaur Israfilov  
+Aspiring Data Analyst focused on SQL, Python and Business Intelligence
