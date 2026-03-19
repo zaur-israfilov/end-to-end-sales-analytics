@@ -36,7 +36,33 @@ It includes:
 
 ### 1. Excel – Business Exploration
 
-Excel was used for initial business-focused analysis using pivot tables.
+
+### 2. SQL – Business Query Analysis
+
+SQL was used to answer key business questions from the dataset and structure raw data into meaningful insights.
+
+#### Key Business Questions
+
+- What is the total revenue?
+- Which product categories generate the most revenue and profit?
+- Which products drive the highest sales?
+- How do sales change over time?
+- Which customers generate the highest revenue?
+- Which states perform best?
+
+#### Business Value
+
+SQL analysis transforms raw transactional data into structured answers that support:
+
+- category performance evaluation  
+- customer prioritization  
+- product-level decision-making  
+- sales trend monitoring  
+
+
+### 3. Python – Data Processing (upcoming)
+
+### 4. Power BI – Dashboard (upcoming)
 
 ### Key Analyses:
 
@@ -87,26 +113,42 @@ Excel was used for initial business-focused analysis using pivot tables.
 ## Tools Used
 
 - Excel (Pivot Tables, Business Analysis)
-- SQL (planned for analytical queries)
+- SQL (business query analysis)
 - Python (EDA – upcoming)
 - Power BI (dashboard – upcoming)
 
 ---
 
 ## Project Structure
-
 ```
 end-to-end-sales-analytics
 │
 ├── data
+│   └── superstore.csv
+│
 ├── excel
+│   └── sales_analysis.xlsx
+│
 ├── sql
+│   ├── schema.sql
+│   └── analysis.sql
+│
 ├── python
+│   └── (coming soon)
+│
 ├── powerbi
+│   └── (coming soon)
+│
 ├── images
+│   └── excel
+│       ├── revenue_by_region.png
+│       ├── revenue_by_category.png
+│       ├── profit_by_category.png
+│       ├── top_products.png
+│       └── monthly_sales.png
+│
 └── README.md
 ```
-
 ---
 
 ## Author
