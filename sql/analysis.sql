@@ -5,65 +5,61 @@
 -- =====================================================
 
 
--- 1. Total number of records in the dataset
-SELECT 
-    COUNT(*) AS total_rows
+-- 1. Total Revenue
+SELECT SUM(sales) AS total_revenue
 FROM sales;
 
 
--- 2. Average bill amount
-SELECT 
-    AVG(total_bill) AS avg_bill
-FROM sales;
-
-
--- 3. Average tip amount
-SELECT 
-    AVG(tip) AS avg_tip
-FROM sales;
-
-
--- 4. Average bill by day of the week
-SELECT 
-    day,
-    AVG(total_bill) AS avg_bill
+-- 2. Revenue by Category
+SELECT category, SUM(sales) AS revenue
 FROM sales
-GROUP BY day
-ORDER BY avg_bill DESC;
-
-
--- 5. Average tip by smoker status
-SELECT 
-    smoker,
-    AVG(tip) AS avg_tip
-FROM sales
-GROUP BY smoker;
-
-
--- 6. Revenue analysis by day
-SELECT
-    day,
-    COUNT(*) AS total_orders,
-    SUM(total_bill) AS revenue,
-    AVG(total_bill) AS avg_bill
-FROM sales
-GROUP BY day
+GROUP BY category
 ORDER BY revenue DESC;
 
 
--- 7. Average tip percentage
-SELECT
-    ROUND(AVG(tip / NULLIF(total_bill, 0)) * 100, 2) AS avg_tip_percentage
-FROM sales;
-
-
--- 8. Lunch vs Dinner revenue analysis
-SELECT
-    time,
-    COUNT(*) AS total_orders,
-    SUM(total_bill) AS revenue,
-    AVG(total_bill) AS avg_bill,
-    AVG(tip) AS avg_tip
+-- 3. Profit by Category
+SELECT category, SUM(profit) AS profit
 FROM sales
-GROUP BY time
+GROUP BY category
+ORDER BY profit DESC;
+
+
+-- 4. Top 10 Products
+SELECT product_name, SUM(sales) AS revenue
+FROM sales
+GROUP BY product_name
+ORDER BY revenue DESC
+LIMIT 10;
+
+
+-- 5. Monthly Sales Trend
+SELECT 
+    DATE_TRUNC('month', order_date) AS month,
+    SUM(sales) AS revenue
+FROM sales
+GROUP BY month
+ORDER BY month;
+
+
+-- 6. Top Customers
+SELECT customer_name, SUM(sales) AS revenue
+FROM sales
+GROUP BY customer_name
+ORDER BY revenue DESC
+LIMIT 10;
+
+
+-- 7. Region Performance
+SELECT state, SUM(sales) AS revenue
+FROM sales
+GROUP BY state
 ORDER BY revenue DESC;
+
+
+-- 8. Ranking
+SELECT 
+    product_name,
+    SUM(sales) AS revenue,
+    ROW_NUMBER() OVER (ORDER BY SUM(sales) DESC) AS rank
+FROM sales
+GROUP BY product_name;
