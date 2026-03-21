@@ -5,38 +5,38 @@
 -- ==================================================
 
 
--- =========================================
+-- ==================================================
 -- 1. Total Revenue
 -- Purpose: Calculate overall sales performance of the business
--- =========================================
+-- ==================================================
 SELECT SUM(sales) AS total_revenue
 FROM sales;
 
 
--- =========================================
+-- ==================================================
 -- 2. Revenue by Category
 -- Purpose: Identify which product categories generate the most revenue
--- =========================================
+-- ==================================================
 SELECT category, SUM(sales) AS revenue
 FROM sales
 GROUP BY category
 ORDER BY revenue DESC;
 
 
--- =========================================
+-- ==================================================
 -- 3. Profit by Category
 -- Purpose: Analyze profitability across categories (not just revenue)
--- =========================================
+-- ==================================================
 SELECT category, SUM(profit) AS profit
 FROM sales
 GROUP BY category
 ORDER BY profit DESC;
 
 
--- =========================================
+-- ==================================================
 -- 4. Top 10 Products
 -- Purpose: Find top-performing products by revenue (for inventory & marketing decisions)
--- =========================================
+-- ==================================================
 SELECT product_name, SUM(sales) AS revenue
 FROM sales
 GROUP BY product_name
@@ -44,10 +44,10 @@ ORDER BY revenue DESC
 LIMIT 10;
 
 
--- =========================================
+-- ==================================================
 -- 5. Monthly Sales Trend
 -- Purpose: Understand sales trend over time (seasonality, growth)
--- =========================================
+-- ==================================================
 SELECT 
     DATE_TRUNC('month', order_date) AS month,
     SUM(sales) AS revenue
@@ -56,10 +56,10 @@ GROUP BY month
 ORDER BY month;
 
 
--- =========================================
+-- ==================================================
 -- 6. Top Customers
 -- Purpose: Identify high-value customers by total sales
--- =========================================
+-- ==================================================
 SELECT customer_name, SUM(sales) AS revenue
 FROM sales
 GROUP BY customer_name
@@ -67,20 +67,20 @@ ORDER BY revenue DESC
 LIMIT 10;
 
 
--- =========================================
+-- ==================================================
 -- 7. State Performance
 -- Purpose: Compare performance across states
--- =========================================
+-- ==================================================
 SELECT state, SUM(sales) AS revenue
 FROM sales
 GROUP BY state
 ORDER BY revenue DESC;
 
 
--- =========================================
+-- ==================================================
 -- 8. Ranking
 -- Purpose: Rank products based on revenue contribution
--- =========================================
+-- ==================================================
 SELECT 
     product_name,
     SUM(sales) AS revenue,
@@ -89,10 +89,10 @@ FROM sales
 GROUP BY product_name;
 
 
--- =========================================
+-- ==================================================
 -- 9. Customer Segmentation (Advanced)
 -- Purpose: Segment customers based on total spending
--- =========================================
+-- ==================================================
 SELECT
     customer_name,
     SUM(sales) AS total_spent,
@@ -106,10 +106,10 @@ GROUP BY customer_name
 ORDER BY total_spent DESC;
 
 
--- =========================================
+-- ==================================================
 -- 10. Running Total Sales (Window Function)
 -- Purpose: Track cumulative revenue over time
--- =========================================
+-- ==================================================
 SELECT
     order_date,
     SUM(sales) AS daily_sales,
@@ -119,9 +119,9 @@ GROUP BY order_date
 ORDER BY order_date;
 
 
--- =========================================
+-- ==================================================
 -- 11. Top Products by Category (Advanced Ranking)
--- =========================================
+-- ==================================================
 SELECT *
 FROM (
     SELECT
