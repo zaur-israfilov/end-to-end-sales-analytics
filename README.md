@@ -1,8 +1,12 @@
 # End-to-End Sales Analytics Project
 
-This project demonstrates a complete data analysis workflow using a real retail dataset.
+This project simulates a real-world business scenario where a retail company analyzes sales performance to improve revenue and profitability.
 
-The goal is to transform raw sales data into **actionable business insights** using Excel, SQL, Python, and Power BI.
+The project follows a full analytics workflow:
+- Data exploration (Excel)
+- Data modeling & querying (SQL)
+- Data analysis (Python)
+- Dashboarding (Power BI)
 
 ---
 
@@ -16,6 +20,11 @@ Retail businesses need to understand:
 - which products contribute most to revenue
 
 This project analyzes historical sales data to support **better decision-making and performance optimization.**
+
+Stakeholders need data-driven answers to optimize:
+- regional performance
+- product strategy
+- customer targeting
 
 ---
 
@@ -34,12 +43,7 @@ It includes:
 
 ## Project Pipeline
 
-### 1. Excel – Business Exploration
-
-
-### 2. SQL – Business Query Analysis
-
-SQL was used to answer key business questions from the dataset and structure raw data into meaningful insights.
+Data → Cleaning → Analysis → Visualization → Business Insights → Recommendations
 
 #### Key Business Questions
 
