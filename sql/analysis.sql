@@ -80,3 +80,50 @@ SELECT
     ROW_NUMBER() OVER (ORDER BY SUM(sales) DESC) AS rank
 FROM sales
 GROUP BY product_name;
+
+-- =========================================
+-- 9. Customer Segmentation (Advanced)
+-- Purpose: Segment customers based on total spending
+-- =========================================
+
+SELECT
+    customer_name,
+    SUM(sales) AS total_spent,
+    CASE
+        WHEN SUM(sales) > 5000 THEN 'High Value'
+        WHEN SUM(sales) BETWEEN 2000 AND 5000 THEN 'Medium Value'
+        ELSE 'Low Value'
+    END AS customer_segment
+FROM sales
+GROUP BY customer_name
+ORDER BY total_spent DESC;
+
+-- =========================================
+-- 10. Running Total Sales (Window Function)
+-- Purpose: Track cumulative revenue over time
+-- =========================================
+
+SELECT
+    order_date,
+    SUM(sales) AS daily_sales,
+    SUM(SUM(sales)) OVER (ORDER BY order_date) AS cumulative_sales
+FROM sales
+GROUP BY order_date
+ORDER BY order_date;
+
+-- =========================================
+-- 11. Top Products by Category (Advanced Ranking)
+-- =========================================
+
+SELECT *
+FROM (
+    SELECT
+        category,
+        product_name,
+        SUM(sales) AS revenue,
+        RANK() OVER (PARTITION BY category ORDER BY SUM(sales) DESC) AS rank
+    FROM sales
+    GROUP BY category, product_name
+) ranked
+WHERE rank <= 3;
+
