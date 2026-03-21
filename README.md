@@ -12,19 +12,30 @@ The project follows a full analytics workflow:
 
 ## Business Problem
 
-Retail businesses need to understand:
+A retail company is facing challenges in understanding its sales performance and needs data-driven insights to:
 
 - which regions drive the most revenue
 - which product categories are most profitable
 - how sales evolve over time
 - which products contribute most to revenue
 
-This project analyzes historical sales data to support **better decision-making and performance optimization.**
+This project analyzes historical sales data to generate actionable insights that support strategic decision-making and business growth.
 
 Stakeholders need data-driven answers to optimize:
 - regional performance
 - product strategy
 - customer targeting
+
+---
+
+## Business Impact
+
+The insights generated from this analysis can help the company:
+
+- increase revenue by focusing on high-performing regions and products
+- improve profitability by identifying low-margin categories
+- optimize inventory planning using sales trends
+- enhance customer targeting strategies
 
 ---
 
