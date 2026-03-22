@@ -1,83 +1,66 @@
-# 🛒 Superstore Sales Analysis
+# 📊 End-to-End Sales Analytics
 
-## 📌 Project Overview
-This project analyzes retail sales data to uncover insights related to revenue, profitability, and product performance.
-
-The goal is to identify key drivers of profit and loss and provide actionable business recommendations.
+This project demonstrates a complete data analysis workflow from raw data to actionable business insights.
 
 ---
 
-## 📊 Dataset
-- ~10,000 records
-- Features include: sales, profit, discount, region, category, sub-category, and product details
+## 🚀 Project Overview
+
+The goal of this project is to analyze retail sales data and identify key factors affecting profitability.
+
+The analysis combines:
+- Excel (data source)
+- SQL (data querying)
+- Python (EDA & analysis)
+- Power BI (visualization)
 
 ---
 
-## 🧹 Data Cleaning
-- Handled missing values
-- Converted data types (numeric & datetime)
-- Cleaned inconsistent formats (e.g., discount percentages)
-- Ensured dataset consistency for analysis
+## 📂 Project Structure
+
+- `/data` → raw dataset
+- `/sql` → SQL queries and analysis
+- `/python` → data analysis notebooks
+- `/images` → visualizations used in reporting
+- `/powerbi` → dashboard (if exists)
 
 ---
 
-## 🔍 Exploratory Data Analysis (EDA)
-- Sales and profit distribution
-- Discount impact on profitability
-- Regional performance comparison
-- Category & sub-category analysis
-- Identification of loss-making products
+## 🔍 Key Insights
+
+- High discount rates are the primary driver of losses
+- Certain regions (e.g., Central) underperform significantly
+- Furniture category generates the lowest profit
+- A small number of products contribute heavily to total losses
 
 ---
 
-## 💡 Key Insights
+## 📈 Sample Visuals
 
-### 1. Discount vs Profitability
-Orders with negative profit have significantly higher discounts (~48%) compared to profitable orders (~8%).
-
-➡️ Excessive discounting is a major driver of losses.
-
----
-
-### 2. Regional Performance
-The Central region has the lowest total profit.
-
-➡️ Indicates possible operational or pricing inefficiencies.
+![Revenue by Category](images/revenue_by_category.png)
+![Profit by Category](images/profit_by_category.png)
+![Revenue by Region](images/revenue_by_region.png)
 
 ---
 
-### 3. Category Performance
-Furniture category generates significantly lower profit than Technology and Office Supplies.
+## 🛠 Tools Used
+
+- Excel
+- SQL
+- Python (Pandas, Matplotlib)
+- Power BI
 
 ---
 
-### 4. Sub-category Loss Drivers
-Tables, Bookcases, and Supplies contribute most to losses.
+## 💡 Business Recommendations
 
----
-
-### 5. Loss-making Products
-High-value items such as printers and binding systems generate the largest losses.
-
-➡️ Suggests pricing or discount strategy issues.
-
----
-
-## 📈 Recommendations
-- Reduce excessive discounting, especially on high-value products
-- Re-evaluate pricing strategy for loss-making products
+- Reduce excessive discounting on high-value products
+- Re-evaluate pricing strategy for loss-making items
 - Focus on high-performing categories (Technology, Office Supplies)
-- Investigate underperforming regions (e.g., Central)
-- Consider removing or replacing consistently unprofitable products
+- Investigate underperforming regions
 
 ---
 
-## 🛠️ Tools & Technologies
-- Python
-- Pandas
-- Jupyter Notebook
+## 📌 Conclusion
 
----
-
-## 🚀 Outcome
-This analysis provides actionable insights to improve profitability, optimize pricing, and reduce losses across key business areas.
+This project highlights how data analysis can uncover hidden inefficiencies and support better business decisions.
