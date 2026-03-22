@@ -1,157 +1,83 @@
-# End-to-End Sales Analytics Project
+# 🛒 Superstore Sales Analysis
 
-This project demonstrates a complete data analysis workflow using a real retail dataset.
+## 📌 Project Overview
+This project analyzes retail sales data to uncover insights related to revenue, profitability, and product performance.
 
-The goal is to transform raw sales data into **actionable business insights** using Excel, SQL, Python, and Power BI.
-
----
-
-## Business Problem
-
-Retail businesses need to understand:
-
-- which regions drive the most revenue
-- which product categories are most profitable
-- how sales evolve over time
-- which products contribute most to revenue
-
-This project analyzes historical sales data to support **better decision-making and performance optimization.**
+The goal is to identify key drivers of profit and loss and provide actionable business recommendations.
 
 ---
 
-## Dataset
-
-The dataset contains **9,994 retail transactions** from a global superstore.
-
-It includes:
-
-- order and shipping dates
-- customer and regional data
-- product categories and sub-categories
-- sales, quantity, discount, and profit
+## 📊 Dataset
+- ~10,000 records
+- Features include: sales, profit, discount, region, category, sub-category, and product details
 
 ---
 
-## Project Pipeline
-
-### 1. Excel – Business Exploration
-
-
-### 2. SQL – Business Query Analysis
-
-SQL was used to answer key business questions from the dataset and structure raw data into meaningful insights.
-
-#### Key Business Questions
-
-- What is the total revenue?
-- Which product categories generate the most revenue and profit?
-- Which products drive the highest sales?
-- How do sales change over time?
-- Which customers generate the highest revenue?
-- Which states perform best?
-
-#### Business Value
-
-SQL analysis transforms raw transactional data into structured answers that support:
-
-- category performance evaluation  
-- customer prioritization  
-- product-level decision-making  
-- sales trend monitoring  
-
-
-### 3. Python – Data Processing (upcoming)
-
-### 4. Power BI – Dashboard (upcoming)
-
-### Key Analyses:
-
-- Revenue by Region  
-- Revenue by Category  
-- Profit by Category  
-- Top Products  
-- Monthly Sales Trends  
-
-### Visual Results
-
-#### Revenue by Region
-![Revenue by Region](images/excel/revenue_by_region.png)
-
-#### Revenue by Category
-![Revenue by Category](images/excel/revenue_by_category.png)
-
-#### Profit by Category
-![Profit by Category](images/excel/profit_by_category.png)
-
-#### Top Products
-![Top Products](images/excel/top_products.png)
-
-#### Monthly Sales
-![Monthly Sales](images/excel/monthly_sales.png)
+## 🧹 Data Cleaning
+- Handled missing values
+- Converted data types (numeric & datetime)
+- Cleaned inconsistent formats (e.g., discount percentages)
+- Ensured dataset consistency for analysis
 
 ---
 
-## Key Insights from Excel Analysis
-
-- Sales are heavily concentrated in specific regions, indicating uneven market performance.
-- Technology products generate the highest revenue.
-- Profitability varies significantly across categories — not all high-revenue categories are high-profit.
-- A small number of products drive a large share of total revenue (Pareto effect).
-- Sales trends show clear monthly fluctuations, useful for demand planning.
-
----
-
-## Business Interpretation
-
-- Focus on high-performing regions to maximize ROI.
-- Optimize pricing and costs in low-profit categories.
-- Identify and promote top-performing products.
-- Use monthly trends for inventory and staffing planning.
+## 🔍 Exploratory Data Analysis (EDA)
+- Sales and profit distribution
+- Discount impact on profitability
+- Regional performance comparison
+- Category & sub-category analysis
+- Identification of loss-making products
 
 ---
 
-## Tools Used
+## 💡 Key Insights
 
-- Excel (Pivot Tables, Business Analysis)
-- SQL (business query analysis)
-- Python (EDA – upcoming)
-- Power BI (dashboard – upcoming)
+### 1. Discount vs Profitability
+Orders with negative profit have significantly higher discounts (~48%) compared to profitable orders (~8%).
+
+➡️ Excessive discounting is a major driver of losses.
 
 ---
 
-## Project Structure
-```
-end-to-end-sales-analytics
-│
-├── data
-│   └── superstore.csv
-│
-├── excel
-│   └── sales_analysis.xlsx
-│
-├── sql
-│   ├── schema.sql
-│   └── analysis.sql
-│
-├── python
-│   └── (coming soon)
-│
-├── powerbi
-│   └── (coming soon)
-│
-├── images
-│   └── excel
-│       ├── revenue_by_region.png
-│       ├── revenue_by_category.png
-│       ├── profit_by_category.png
-│       ├── top_products.png
-│       └── monthly_sales.png
-│
-└── README.md
-```
+### 2. Regional Performance
+The Central region has the lowest total profit.
+
+➡️ Indicates possible operational or pricing inefficiencies.
+
 ---
 
-## Author
+### 3. Category Performance
+Furniture category generates significantly lower profit than Technology and Office Supplies.
 
-Zaur Israfilov  
-Aspiring Data Analyst focused on SQL, Python and Business Intelligence
+---
+
+### 4. Sub-category Loss Drivers
+Tables, Bookcases, and Supplies contribute most to losses.
+
+---
+
+### 5. Loss-making Products
+High-value items such as printers and binding systems generate the largest losses.
+
+➡️ Suggests pricing or discount strategy issues.
+
+---
+
+## 📈 Recommendations
+- Reduce excessive discounting, especially on high-value products
+- Re-evaluate pricing strategy for loss-making products
+- Focus on high-performing categories (Technology, Office Supplies)
+- Investigate underperforming regions (e.g., Central)
+- Consider removing or replacing consistently unprofitable products
+
+---
+
+## 🛠️ Tools & Technologies
+- Python
+- Pandas
+- Jupyter Notebook
+
+---
+
+## 🚀 Outcome
+This analysis provides actionable insights to improve profitability, optimize pricing, and reduce losses across key business areas.
